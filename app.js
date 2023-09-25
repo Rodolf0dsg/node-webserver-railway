@@ -57,8 +57,12 @@ app.get( '/elements' , (req, res ) => {
 
 
 app.get('*' , (req, res) => {
-    res.write('404 | Not found')
-    res.end();
+
+    res.render('404', {
+        titulo: 'Curso de Node',
+        nombre: 'Rodolfo',
+    })
+
 })
 
 app.listen( port, () => {
